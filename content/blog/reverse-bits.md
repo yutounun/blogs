@@ -1,0 +1,71 @@
+---
+external: false
+draft: false
+title: 【Leetcode】Easy problem - Reverse Bits
+description: This post is a draft and won't be built.
+date: 2022-11-22
+categories:
+  - leetcode
+---
+
+level: 8
+
+1st time
+
+## Problem
+
+Reverse bits of a given 32 bits unsigned integer.
+
+Note:
+
+```
+Note that in some languages, such as Java, there is no unsigned integer type. In this case, both input and output will be given as a signed integer type. They should not affect your implementation, as the integer's internal binary representation is the same, whether it is signed or unsigned.
+In Java, the compiler represents the signed integers using 2's complement notation. Therefore, in Example 2 above, the input represents the signed integer -3 and the output represents the signed integer -1073741825.
+```
+
+Example 1:
+
+```
+Input: n = 00000010100101000001111010011100
+Output: 964176192 (00111001011110000010100101000000)
+Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.
+```
+
+## Solution
+
+```javascript
+function reverseBits(n) {
+  let result = 0;
+  for (let i = 0; i < 32; i++) {
+    // resultは左にずらしながら右端に入力値の右から入れていく
+    // nはresultに挿入されたものから右に詰めていく n→ result←
+    // bitを動かすけど表面上動かしているわけではない。console出すと10進数整数が変化しているだけ
+    result <<= 1; // 左に1ビットシフト(resultが左に一個ずつずれる)
+    result |= n & 1; // 入力の最後のビットを結果に追加(入力値の最後をresultの一番最後に)
+    n >>= 1; // 入力を右に1ビットシフト(入力値を一個右に)
+  }
+  return result >>> 0; // 結果を符号なし整数に変換
+}
+```
+
+n & 1 は、n の**最後のビット**が 1 の場合に 1 を返し、0 の場合に 0 を返します。
+|=で右端ビットに追加する
+
+符号付き整数と符号なし整数の違いは、符号付き整数は負の値を表現できるが、符号なし整数は非負の値のみを表現できる点です。符号付き整数では、最上位ビット（左端のビット）が符号を表すために使用されます。0 は正、1 は負を意味します。
+
+1 回目のループ:
+
+右端のビット: 0
+result の変化: 00000000000000000000000000000000 (左にシフト) -> 00000000000000000000000000000000 (ビットを追加)
+2 回目のループ:
+
+右端のビット: 0
+result の変化: 00000000000000000000000000000000 (左にシフト) -> 00000000000000000000000000000000 (ビットを追加)
+3 回目のループ:
+
+右端のビット: 1
+result の変化: 00000000000000000000000000000000 (左にシフト) -> 00000000000000000000000000000001 (ビットを追加)
+4 回目のループ:
+
+右端のビット: 1
+result の変化: 00000000000000000000000000000010 (左にシフト) -> 00000000000000000000000000000011 (ビットを追加)
