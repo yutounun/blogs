@@ -1,56 +1,47 @@
 ---
 external: false
 draft: false
-title: Adding Tailwind on Astro project will conflict
+title: Resolving Conflicts When Adding Tailwind to an Astro Project
 description: This post is a draft and won't be built.
 date: 2023-09-22
 categories:
   - web development
 ---
 
-# The Goal
+## Objective:
 
-**To add [markdoc](https://markdoc.dev/) to astro project.**
+Integrate `markdoc` into an Astro project.
 
-## The problem
+## Issue Encountered:
+
+While running the development server with `$ npm run dev`, the following error was encountered:
 
 ```
-$ npm run dev
-
-> blogster-bubblegum@0.0.1 dev
-> astro dev
-
- error   Cannot read properties of undefined (reading 'postcss')
-  File:
-    /Users/ichiharayuto/Documents/programs/blogs/node_modules/@astrojs/tailwind/dist/index.js:78:22
-  Code:
-    77 |         const tailwindConfig = (userConfig == null ? void 0 : userConfig.value) ?? getDefaultTailwindConfig(config.srcDir);
-    > 78 |         config.style.postcss.plugins.push(tailwindPlugin(tailwindConfig));
-         |                      ^
-      79 |         config.style.postcss.plugins.push(autoprefixerPlugin);
-      80 |         if (applyBaseStyles) {
-      81 |           injectScript("page-ssr", `import '@astrojs/tailwind/base.css';`);
-  Stacktrace:
+error   Cannot read properties of undefined (reading 'postcss')
+...
 TypeError: Cannot read properties of undefined (reading 'postcss')
-    at astro:config:setup (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/@astrojs/tailwind/dist/index.js:78:22)
-    at async withTakingALongTimeMsg (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/astro/dist/integrations/index.js:18:18)
-    at async runHookConfigSetup (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/astro/dist/integrations/index.js:110:7)
-    at async createContainer (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/astro/dist/core/dev/container.js:20:14)
-    at async createContainerWithAutomaticRestart (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/astro/dist/core/dev/restart.js:74:28)
-    at async dev (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/astro/dist/core/dev/dev.js:11:19)
-    at async dev (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/astro/dist/cli/dev/index.js:26:10)
-    at async runCommand (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/astro/dist/cli/index.js:107:22)
-    at async cli (file:///Users/ichiharayuto/Documents/programs/blogs/node_modules/astro/dist/cli/index.js:144:5)
+...
 ```
 
-## Tries
+This error originates from the `@astrojs/tailwind` module, indicating a potential conflict or misconfiguration.
 
-- Looked for a solution on Github issues
+## Attempted Solutions:
 
-## Solution
+A search was conducted on GitHub issues to find potential solutions or similar problems faced by other developers.
 
-Install @astrojs/tailwind@^3.0.0-beta.1 will solve this problem according to [an issue on Github](https://github.com/withastro/astro/issues/5850).
+## Resolution:
+
+Based on a relevant GitHub issue, the problem can be resolved by updating version of `@astrojs/tailwind`.
 
 ```
-npm install @astrojs/tailwind@^3.0.0-beta.1 --save-dev
+"dependencies": {
+   ...
+    "@astrojs/tailwind": "^3.1.3",
+    ...
+    "tailwindcss": "^3.3.3",
+    ...
+  },
+
 ```
+
+By following the above step, the conflict between Tailwind and the Astro project should be resolved.
