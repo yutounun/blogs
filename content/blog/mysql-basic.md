@@ -5,7 +5,7 @@ title: Basic knowledge I needed about MySQL when creating CRUD app with Express
 description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
-  - web development
+  - web-development
 ---
 
 ## MySQL Installation on Mac M1

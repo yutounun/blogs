@@ -5,7 +5,7 @@ title: How to Fix the 404 Error on Netlify's Dev Environment
 description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
-  - web development
+  - web-development
 ---
 
 If you've encountered a 404 error on Netlify's dev environment, but not on your local machine, don't worry - there's an easy solution. In this article, we'll go over how to quickly fix this issue and get your application up and running.

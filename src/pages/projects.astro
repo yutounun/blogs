@@ -22,6 +22,17 @@ const sortedProjects = projects
 <PageLayout>
   <PageMeta title={`Projects | ${SITE_TITLE}`} slot="meta" />
   <section slot="main">
+    <div class="mb-6">
+      <h1
+        class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden"
+      >
+        <span
+          class="bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%] from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue"
+        >
+          Projects
+        </span>
+      </h1>
+    </div>
     <ul>
       {
         sortedProjects.map((project) => {

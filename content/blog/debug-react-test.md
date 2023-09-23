@@ -5,7 +5,7 @@ title: How to Debug React Testing Library Code Without Limitations
 description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
-  - web development
+  - web-development
 ---
 
 If you've encountered the problem of limited lines of DOM being rendered when trying to debug your code using the React Testing Library, don't worry - there is a solution. In this article, we'll go over how to remove the limit on the number of lines rendered by the `screen.debug()` function and output all the elements you want to see.

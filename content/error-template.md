@@ -5,7 +5,7 @@ title: error
 description: This post is a draft and won't be built.
 date: 2023-09-22
 categories:
-  - web development
+  - web-development
 ---
 
 ## Objective:

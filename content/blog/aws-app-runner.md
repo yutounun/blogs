@@ -5,7 +5,7 @@ title: How to run AWS App Runner
 description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
-  - web development
+  - web-development
 ---
 
 ## Create Registry on ECR

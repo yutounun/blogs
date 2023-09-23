@@ -5,7 +5,7 @@ title: Deploying a Full-Stack Monorepo Application with Express and React on AWS
 description: This post is a draft and won't be built.
 date: 2023-02-25
 categories:
-  - web development
+  - web-development
 ---
 
 ## Introduction

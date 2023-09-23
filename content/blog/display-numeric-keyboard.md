@@ -5,7 +5,7 @@ title: How to display only the numeric keyboard when a user inputs a number
 description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
-  - web development
+  - web-development
 ---
 
 If you're having trouble displaying the numeric keyboard when a user inputs a number on the MUI TextField component, don't worry - there's a solution. In this article, we'll show you how to quickly enable this feature.

@@ -5,7 +5,7 @@ title: Remove "Gatsby Starter Contentful" title on your contentful blog
 description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
-  - web development
+  - web-development
 ---
 
 ## Introduction

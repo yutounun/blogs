@@ -72,6 +72,14 @@ export async function read<T extends z.ZodTypeAny>({
   };
 }
 
+/**
+ * Reads and returns the content of a specific file based on the given directory and slug.
+ *
+ * @param {string} directory - The directory where the file is located.
+ * @param {string} slug - The slug of the file.
+ * @param {T} frontmatterSchema - The schema used to validate the file's frontmatter.
+ * @return {Promise} The content of the file.
+ */
 export async function readOne<T extends z.ZodTypeAny>({
   directory,
   slug,
@@ -95,8 +103,30 @@ export async function readAll<T extends z.ZodTypeAny>({
   directory: string;
   frontmatterSchema: T;
 }) {
+  // get path to the md file
   const pathToDir = path.posix.join(contentDirectory, directory);
+  // get all paths to the md files such as ["blog/first-post.md", "blog/second-post.md"]
   const paths = await globby(`${pathToDir}/*.md`);
 
   return Promise.all(paths.map((path) => read({ filepath: path, schema })));
+}
+
+export async function readByCategory<T extends z.ZodTypeAny>({
+  directory,
+  category,
+  frontmatterSchema: schema,
+}: {
+  directory: string;
+  category: string;
+  frontmatterSchema: T;
+}) {
+  // すべてのMarkdownファイルを読み込む
+  const allPosts = await readAll({ directory, frontmatterSchema: schema });
+
+  // 指定されたカテゴリに一致する投稿のみをフィルタリング
+  const filteredPosts = allPosts.filter((post) =>
+    post.frontmatter.categories.includes(category)
+  );
+
+  return filteredPosts;
 }

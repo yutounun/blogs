@@ -5,7 +5,7 @@ title: Markdoc cannot be added to Astro Project
 description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
-  - web development
+  - web-development
 ---
 
 # The Goal
