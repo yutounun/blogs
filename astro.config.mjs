@@ -2,7 +2,6 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import markdoc from "@astrojs/markdoc";
 /* 
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
   In local development, your SEO meta tags will have localhost URL.
@@ -39,6 +38,5 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
-    markdoc(),
   ],
 });
