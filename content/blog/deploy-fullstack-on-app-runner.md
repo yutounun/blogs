@@ -23,7 +23,7 @@ Before you begin, make sure you have:
 
 In your Express backend directory, create a `Dockerfile` with the following content:
 
-```Dockerfile
+```
 # Use the official Node.js image as the base image
 FROM node:14
 
@@ -52,7 +52,7 @@ Replace `3001` with the port your Express app is using, if different.
 
 In your React frontend directory, create a `Dockerfile` with the following content:
 
-```Dockerfile
+```
 # Build stage
 FROM node:14 as build
 
