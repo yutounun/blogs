@@ -28,7 +28,7 @@ export const blog = z.discriminatedUnion("external", [
   baseSchema.extend({
     external: z.literal(false),
     description: z.optional(z.string()),
-    categories: z.array(z.string()),
+    categories: z.optional(z.array(z.string())),
     ogImagePath: z.optional(z.string()),
     canonicalUrl: z.optional(z.string()),
   }),

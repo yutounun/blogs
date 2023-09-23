@@ -19,7 +19,7 @@ const { category } = Astro.params;
 
 // Filter posts by category
 const posts = await readByCategory({
-  category: category,
+  category: category ? category : '',
   directory: "blog",
   frontmatterSchema: blog,
 });
