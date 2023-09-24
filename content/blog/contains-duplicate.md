@@ -41,7 +41,7 @@ Given an integer array `nums`, return `true` if any value appears at least twice
 - `1 <= nums.length <= 105`
 - `-109 <= nums[i] <= 109`
 
-## Python3 Solution
+## Python3 Solution1
 
 ```python
 from typing import List
@@ -57,7 +57,7 @@ class Solution:
         return False
 ```
 
-### Explanation:
+### Explanation1:
 
 1. Create an empty hashmap. Hashmaps can solve problems in O(1) time complexity.
 2. Iterate through the given array.
@@ -65,5 +65,17 @@ class Solution:
 4. If the number is already in the map, return `True` since it means the number has already appeared once.
 5. If all numbers are distinct, return `False`.
 
-**Memory**: O(1)  
-**Time Complexity**: O(1)
+**Memory**: O(n)  
+**Time Complexity**: O(n)
+
+### Python3 Solution2
+
+```python
+class Solution(object):
+    def containsDuplicate(self, nums):
+        return len(set(nums)) != len(nums)
+```
+
+### Explanation2:
+
+"Sets are data structures that inherently do not allow duplicate values. Therefore, if we convert the nums list into a set, any duplicate values from the list will be removed in the set. Consequently, if the length of the set is different from the length of the original nums list, it indicates that nums contained duplicate values."
