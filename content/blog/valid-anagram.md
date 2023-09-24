@@ -1,7 +1,7 @@
 ---
 external: false
 draft: false
-title: 217. Contains Duplicate
+title: 242. Valid Anagram
 description: leetcode easy problem
 date: 2023-09-24
 categories:
