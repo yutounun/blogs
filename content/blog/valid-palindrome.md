@@ -53,42 +53,31 @@ s consists only of printable ASCII characters.
 
 ### Intuition
 
-<!-- Describe your first thoughts on how to solve this problem. -->
+First solution that comes up with me was to check all elements of a given string and reverse it to check if the reversed one and original one is same.
 
 ### Approach
 
-<!-- Describe your approach to solving the problem. -->
+1. Iterate a given string
+2. Check each element if it's alphabet or digit or something else.
+3. If it's alphabet or digit, merge it to a "clean_word"
+4. At last, check if the reversed one and original one is same.
 
 ## Complexity
 
-- Time complexity:
+- Time complexity: O(n)
 
-- Space complexity:
+- Space complexity: O(n)
 
 ### Code
 
 ```
 class Solution:
-    # ssee, edsd: false
-    # feef, efef: true
-    # hashmap
-    # O(len(s) + len(t))→O(n)
-    def isAnagram(self, ss: str, tt: str) -> bool:
-        # create hashmap
-        smap = {}
-        tmap = {}
-        # iterate ss and tt
-        for s in ss:
-            if s in smap:
-                smap[s] += 1
-            else:
-                smap[s] = 1
-        for t in tt:
-            if t in tmap:
-                tmap[t] += 1
-            else:
-                tmap[t] = 1
-        return smap == tmap
+    def isPalindrome(self, s: str) -> bool:
+        cleaned_word = ''
 
+        for char in s:
+            if char.isalpha() or char.isdigit():
+                cleaned_word += char.lower()
 
+        return cleaned_word == cleaned_word[::-1]
 ```
