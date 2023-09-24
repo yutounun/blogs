@@ -11,6 +11,9 @@ export function getStaticPaths() {
     {params: {category: 'leetcode'}},
     {params: {category: 'life'}},
     {params: {category: 'translation'}},
+    {params: {category: 'easy-problem'}},
+    {params: {category: 'medium-problem'}},
+    {params: {category: 'difficult-problem'}},
   ];
 }
 
@@ -48,6 +51,14 @@ const headerCategories = [
   {
     label: "translation",
     path: "/blog/category/translation",
+  },
+  {
+    label: "easy-problems",
+    path: "/blog/category/easy-problem",
+  },
+  {
+    label: "medium-problems",
+    path: "/blog/category/medium-problem",
   },
 ]
 ---

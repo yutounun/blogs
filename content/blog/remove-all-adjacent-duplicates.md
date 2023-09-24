@@ -6,6 +6,7 @@ description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
   - leetcode
+  - easy-problem
 ---
 
 https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/

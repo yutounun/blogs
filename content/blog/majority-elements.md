@@ -6,6 +6,7 @@ description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
   - leetcode
+  - easy-problem
 ---
 
 Javascript fast and easy-understanding solution using a hashmap.

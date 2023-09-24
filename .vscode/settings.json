@@ -1,5 +1,6 @@
 {
   "files.associations": {
     "*.mdoc": "markdown"
-  }
+  },
+  "editor.formatOnSave": true
 }

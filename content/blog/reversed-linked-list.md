@@ -6,6 +6,7 @@ description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
   - leetcode
+  - easy-problem
 ---
 
 In this article, we will explore how to reverse a singly-linked list using JavaScript. A singly-linked list is a data structure in which each node points to the next node, creating a linear sequence of nodes.

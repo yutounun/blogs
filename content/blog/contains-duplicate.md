@@ -6,6 +6,7 @@ description: leetcode easy problem
 date: 2023-09-24
 categories:
   - leetcode
+  - easy-problem
 ---
 
 **URL**: [LeetCode Problem](https://leetcode.com/problems/contains-duplicate/description/)
