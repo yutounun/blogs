@@ -50,3 +50,5 @@ reverse ==reverse[::-1]
 
 - char.isalpha()
 - char.isdigit():
+- isalnum()
+  Return true if the target is al or num
