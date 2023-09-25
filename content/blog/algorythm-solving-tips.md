@@ -1,7 +1,7 @@
 ---
 external: false
 draft: false
-title: algorithm solving tips
+title: algorithm solving tips for python users
 description: This post is a draft and won't be built.
 date: 2023-09-24
 categories:
@@ -48,7 +48,19 @@ reverse ==reverse[::-1]
 
 ## Check the type of given object
 
-- char.isalpha()
-- char.isdigit():
-- isalnum()
-  Return true if the target is al or num
+#### char.isalpha()
+
+Return true if the target is alphabet
+
+#### char.isdigit()
+
+Return true if the target is num
+
+#### isalnum()
+
+Return true if the target is alphabet or num
+
+## Vocabulary
+
+- 1-indexed array
+  An array starting from index 1, not 0

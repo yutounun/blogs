@@ -7,6 +7,7 @@ date: 2023-09-24
 categories:
   - leetcode
   - easy-problem
+  - hashmap
 ---
 
 **URL**: [LeetCode Problem](https://leetcode.com/problems/valid-anagram/description/)

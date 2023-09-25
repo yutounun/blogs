@@ -7,6 +7,8 @@ date: 2023-09-24
 categories:
   - leetcode
   - easy-problem
+  - two-pointers
+  - hashmap
 ---
 
 **URL**: [LeetCode Problem](https://leetcode.com/problems/valid-palindrome/)
