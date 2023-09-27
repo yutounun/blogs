@@ -35,8 +35,7 @@ categories:
 
 ### Constraints:
 
-- ``
-- ``
+-
 
 ## Answer
 
@@ -52,6 +51,6 @@ categories:
 
 ### Code
 
-```
+```python
 
 ```

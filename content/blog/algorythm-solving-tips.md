@@ -42,8 +42,8 @@ Basically set is utilized when...
 
 Let's say you'd like to replace "reverse" with "esrever"
 
-```
-reverse ==reverse[::-1]
+```python
+reverse == reverse[::-1]
 ```
 
 ## Check the type of given object
@@ -64,3 +64,10 @@ Return true if the target is alphabet or num
 
 - 1-indexed array
   An array starting from index 1, not 0
+
+## Select the last index of an array
+
+```python
+stack = ["a", "b", "f"]
+print(stack[-1]) # f
+```
