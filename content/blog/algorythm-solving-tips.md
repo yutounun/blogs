@@ -3,7 +3,7 @@ external: false
 draft: false
 title: algorithm solving tips for python users
 description: This post is a draft and won't be built.
-date: 2023-09-24
+date: 2023-09-27
 categories:
   - leetcode
 ---
@@ -71,3 +71,9 @@ Return true if the target is alphabet or num
 stack = ["a", "b", "f"]
 print(stack[-1]) # f
 ```
+
+## Operator
+
+### // 2
+
+it divides the number by 2 and rounds down the result to the nearest integer.
