@@ -58,7 +58,7 @@ Given that this problem must be solved with O(logN) time complexity and the give
 5. If the number at midIdx is less than the target, update lowerIdx to midIdx + 1 to search in the upper half.
 6. Repeat steps 2-5 until you find the target or search all elements.
 
-## Complexity
+### Complexity
 
 - **Time Complexity: `O(logN)`**
 

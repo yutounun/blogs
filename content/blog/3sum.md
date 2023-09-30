@@ -62,7 +62,7 @@ I thought about solving this problem using hashmap as I did when solving 2sum pr
 
 ### Approach
 
-## Complexity
+### Complexity
 
 - Time complexity:
 

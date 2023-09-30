@@ -43,7 +43,7 @@ categories:
 
 ### Approach
 
-## Complexity
+### Complexity
 
 - Time complexity:
 

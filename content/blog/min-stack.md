@@ -77,7 +77,7 @@ Either of the last element can be returned.
 
 Returns the last element of min_array, which is the minimum value currently in the stack.
 
-## Complexity
+### Complexity
 
 - Time complexity: O(n)
 

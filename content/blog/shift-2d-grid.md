@@ -27,7 +27,7 @@ If it is the last row, the popped element is added at the beginning of the first
 This process is repeated 'k' times.
 After all the shifts are done, the updated grid is returned.
 
-## Complexity
+### Complexity
 
 Time complexity:
 O(N^2)

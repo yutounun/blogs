@@ -50,7 +50,7 @@ Use a hashmap solution
 4. if not add the key and value 1
 5. if the length of the object's value is more than length of array/2, return the current num
 
-## Complexity
+### Complexity
 
 - Time complexity:
   O(N)

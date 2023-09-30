@@ -58,7 +58,7 @@ Output: false
 
 ### Approach
 
-## Complexity
+### Complexity
 
 - Time complexity: O(n)
 

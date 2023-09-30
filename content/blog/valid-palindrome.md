@@ -64,7 +64,7 @@ First solution that comes up with me was to check all elements of a given string
 3. If it's alphabet or digit, merge it to a "clean_word"
 4. At last, check if the reversed one and original one is same.
 
-## Complexity
+### Complexity
 
 - Time complexity: O(n)
 
