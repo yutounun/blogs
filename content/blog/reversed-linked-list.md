@@ -1,7 +1,7 @@
 ---
 external: false
 draft: false
-title: 【LeetCode】 206.Reverse Linked List
+title: 【LeetCode】 206.Reverse Linked List with JS
 description: This post is a draft and won't be built.
 date: 2022-11-22
 categories:
