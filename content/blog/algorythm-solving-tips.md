@@ -77,3 +77,10 @@ print(stack[-1]) # f
 ### // 2
 
 it divides the number by 2 and rounds down the result to the nearest integer.
+
+## Memory
+
+### Node
+
+Update the next pointer of a node does not mean you created extra space for that.
+cur ノードや head ノードは、リンクリストの既存のノードを指し示しているだけで、これら自体は新しいメモリを消費していません。これらは単に既存のノードへの参照（ポインタ）であり、リンクリストの各ノードと共に既に割り当てられているメモリを指しています。
