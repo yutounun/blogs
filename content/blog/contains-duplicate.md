@@ -46,38 +46,15 @@ Given an integer array `nums`, return `true` if any value appears at least twice
 ## Python3 Solution1
 
 ```python
-from typing import List
-
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        map = {}
-        for num in nums:
-            if map.get(num, 0) == 1:
-                return True
-            else:
-                map[num] = 1
-        return False
+class Solution(object):
+    def containsDuplicate(self, nums):
+        set_nums = set(nums)
+        return len(set_nums) != len(nums)
 ```
 
 ### Explanation1:
 
-1. Create an empty hashmap. Hashmaps can solve problems in O(1) time complexity.
-2. Iterate through the given array.
-3. If a number hasn't been set in the map yet, set the number in the map with a value of 1.
-4. If the number is already in the map, return `True` since it means the number has already appeared once.
-5. If all numbers are distinct, return `False`.
+1. Compare the length of original given nums and the shorten length of the nums using set.
 
 **Memory**: O(n)  
 **Time Complexity**: O(n)
-
-### Python3 Solution2
-
-```python
-class Solution(object):
-    def containsDuplicate(self, nums):
-        return len(set(nums)) != len(nums)
-```
-
-### Explanation2:
-
-"Sets are data structures that inherently do not allow duplicate values. Therefore, if we convert the nums list into a set, any duplicate values from the list will be removed in the set. Consequently, if the length of the set is different from the length of the original nums list, it indicates that nums contained duplicate values."
