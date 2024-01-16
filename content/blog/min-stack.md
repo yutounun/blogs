@@ -88,29 +88,6 @@ Returns the last element of min_array, which is the minimum value currently in t
 ```python
 class MinStack:
     array = []
-
-    def __init__(self):
-        self.array = []
-
-
-    def push(self, val: int) -> None:
-        self.array.append(val)
-
-    def pop(self) -> None:
-        self.array.pop()
-
-
-    def top(self) -> int:
-        return self.array[-1]
-
-    def getMin(self) -> int:
-        return min(self.array)
-
-```
-
-```python
-class MinStack:
-    array = []
     min_array = []
     def __init__(self):
         self.array = []
