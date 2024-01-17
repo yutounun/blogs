@@ -89,3 +89,25 @@ class Solution:
 
         return -1
 ```
+
+Recursive solution
+
+```python
+import math
+
+class Solution:
+    # binary tree which takes O(logN)
+    def search(self, nums: List[int], target: int) -> int:
+        def __search(l, r):
+            if l > r: return -1
+
+            mid = l+(r-l) // 2
+            if nums[mid] == target:
+                return mid
+            if nums[mid] > target:
+                return __search(l, mid-1)
+            else:
+                return __search(mid+1, r)
+
+        return __search(0, len(nums)-1)
+```
