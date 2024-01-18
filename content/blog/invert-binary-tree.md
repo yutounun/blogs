@@ -52,17 +52,17 @@ To invert a binary tree, you should replace left child node and right child node
 #         self.val = val
 #         self.left = left
 #         self.right = right
-# Replace left child node and right child node recursively
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        # end
+        if not root: return root
 
-        if not root: return
-
-        tmp = root.left
-        root.left, root.right = root.right, root.left
-
+        # recursion: excecute this before main, as invert should be excecuted before parent nodes.
         self.invertTree(root.left)
         self.invertTree(root.right)
+
+        # main: invert child trees
+        root.left, root.right = root.right, root.left
 
         return root
 ```
