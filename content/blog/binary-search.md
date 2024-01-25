@@ -74,19 +74,19 @@ import math
 
 class Solution:
     # binary tree which takes O(logN)
-    # lowerIdx, higherIdx, midIdx
     def search(self, nums: List[int], target: int) -> int:
-        lowerIdx, higherIdx = 0, len(nums)-1
+        if not nums: return False
 
-        while higherIdx >= lowerIdx:
-            midIdx = lowerIdx + (higherIdx - lowerIdx) // 2
-            if nums[midIdx] == target:
-                return midIdx
-            if nums[midIdx] > target:
-                higherIdx = midIdx - 1
+        l, r = 0, len(nums)-1
+
+        while l <= r:
+            mid =(r-l) // 2 + l
+            if nums[mid] == target:
+                return mid
+            if nums[mid] < target:
+                l = mid + 1
             else:
-                lowerIdx = midIdx + 1
-
+                r = mid - 1
         return -1
 ```
 
