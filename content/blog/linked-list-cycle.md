@@ -47,35 +47,17 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 ### Code
 
 ```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution:
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution:
-    # Init two pointers: one is slow advancing 1 step in a loop, another is fast advancing 2 step in a loop
-    # Given one reaches another pointer, meaning there is a cycle in a list
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        if not head: return False
-        if not head.next: return False
+        if not head or not head.next: return False
 
-        slow = fast = head
+        slow, fast = head, head.next
 
         while fast and fast.next:
-            # move forward
-            slow = slow.next
-            fast = fast.next.next
-
-            # checker
-            if slow is fast:
+            if fast is slow:
                 return True
+            fast = fast.next.next
+            slow = slow.next
+
         return False
 ```
