@@ -51,5 +51,18 @@ Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
 ### Code
 
 ```python
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        self.diameter = 0
 
+        def recursion(node):
+            if not node: return 0
+
+            left = recursion(node.left)
+            right = recursion(node.right)
+            self.diameter = max(right+left, self.diameter)
+            return max(right, left) + 1
+
+        ans = recursion(root)
+        return self.diameter
 ```
