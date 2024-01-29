@@ -38,6 +38,7 @@ categories:
 #         self.right = right
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        # Even though root node is initially None, returning True is correct.
         # End conditions
         if p is None and q is None:
             return True
