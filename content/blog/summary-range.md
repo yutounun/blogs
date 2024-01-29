@@ -7,7 +7,6 @@ date: 2024-01-24
 categories:
   - leetcode
   - easy-problem
-  -
 ---
 
 **URL**: [LeetCode Problem](https://leetcode.com/problems/summary-ranges/description/?envType=study-plan-v2&envId=top-interview-150)
