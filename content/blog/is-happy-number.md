@@ -43,7 +43,7 @@ Return true if n is a happy number, and false if not.
 
 ## Python3 Solution
 
-Apply two pointers and if slow and fast meet, it means the number is not happy.
+Apply the two pointers method and if slow and fast meet, it means the number is not happy.
 
 ```python
 class Solution:
