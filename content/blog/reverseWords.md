@@ -43,6 +43,6 @@ class Solution:
         arr = s.split(' ') # [Let's, take, LeetCode, contest]
         rtn = []
         for el in arr:
-            rtn.append(''.join(list(reversed(el))))
+            rtn.append(''.join(reversed(list(el))))
         return ' '.join(rtn)
 ```
