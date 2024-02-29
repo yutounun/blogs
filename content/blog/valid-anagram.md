@@ -83,3 +83,14 @@ class Solution:
 **Memory**: O(n)
 **Time Complexity**: O(1)
 → Because the length of input doesn't effect on the size of each hashmap. The max length of hashmap is 26(length of all english letters)
+
+## Python3 Solution1
+
+```python
+from collections import Counter
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        s_instance = Counter(list(s))
+        t_instance = Counter(list(t))
+        return s_instance == t_instance
+```
