@@ -3,7 +3,7 @@ external: false
 draft: false
 title: 125. Valid Palindrome
 description: leetcode easy problem
-date: 2023-09-24
+date: 2023-09-25
 categories:
   - leetcode
   - easy-problem
