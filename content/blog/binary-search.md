@@ -70,23 +70,19 @@ Given that this problem must be solved with O(logN) time complexity and the give
 ### Code
 
 ```python
-import math
 
 class Solution:
-    # binary tree which takes O(logN)
     def search(self, nums: List[int], target: int) -> int:
-        if not nums: return False
+        high_idx, low_idx = len(nums)-1, 0
+        while low_idx <= high_idx:
+            mid_idx = (high_idx - low_idx)//2 + low_idx
+            if nums[mid_idx] == target:
+                return mid_idx
 
-        l, r = 0, len(nums)-1
-
-        while l <= r:
-            mid =(r-l) // 2 + l
-            if nums[mid] == target:
-                return mid
-            if nums[mid] < target:
-                l = mid + 1
+            if nums[mid_idx] > target:
+                high_idx = mid_idx-1
             else:
-                r = mid - 1
+                low_idx = mid_idx+1
         return -1
 ```
 
