@@ -13,13 +13,16 @@ import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { readAll } from "src/lib/markdoc/read";
+import { blog } from "src/lib/markdoc/frontmatter.schema";
 
 export interface Props {
   title: string;
   date: Date;
+  categories: string[];
 }
 
-const { title, date } = Astro.props;
+const { title, date, categories } = Astro.props;
 const formattedDate = new Date(date).toLocaleDateString("en-us", {
   year: "numeric",
   month: "short",
@@ -52,7 +55,20 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
             {title}
           </span>
         </h1>
-        <time class="block mb-[2em] text-text-muted">{formattedDate}</time>
+        <time class="block text-text-muted">{formattedDate}</time>
+
+        <div class="flex flex-wrap mt-2 md:mt-0 mb-2 -ml-2">
+          {
+            categories.map((category) => (
+              <a
+                href={`/blog/category/${category}`}
+                class="rounded-full hover:font-bold border-gray-400 px-2 transition-transform duration-300 ease-in-out transform hover:-translate-y-1 unset"
+              >
+                {category}
+              </a>
+            ))
+          }
+        </div>
         <slot name="content" />
       </section>
     </main>
