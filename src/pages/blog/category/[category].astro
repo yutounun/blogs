@@ -4,6 +4,7 @@ import { blog } from "../../../lib/markdoc/frontmatter.schema";
 import PageLayout from "../../../layouts/PageLayout.astro";
 import PageMeta from "../../../components/PageMeta.astro";
 import { SITE_TITLE } from "../../../config";
+import Categories from "src/components/Categories.astro";
 
 export function getStaticPaths() {
   return [
@@ -145,15 +146,7 @@ const headerCategories = [
                   {formattedDate}
                 </time>
               </div>
-              <div class="flex flex-wrap gap-2 mt-2 md:mt-0">
-                {post.frontmatter.categories.map((category) => (
-                  <a
-                    href={`/blog/category/${category}`}
-                    class="rounded-full text-xs border hover:font-bold border-gray-400 py-1 px-2 hover:bg-primary-blue transition-transform duration-300 ease-in-out transform hover:-translate-y-1 unset">
-                    {category}
-                  </a>
-                ))}
-              </div>
+              <Categories categories={post.frontmatter.categories} hasBorder />
               <!--
                 <p>{post.frontmatter.description}</p>
               -->
