@@ -34,7 +34,7 @@ export default defineConfig({
   server: {
     port: SERVER_PORT
   },
-  site: BASE_URL,
+  site: "https://dev-whisperer.vercel.app",
   integrations: [sitemap(), tailwind({
     config: {
       applyBaseStyles: false
