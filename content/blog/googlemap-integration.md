@@ -20,7 +20,7 @@ Surprisingly, it’s not. In fact, I had been putting it off while when crafting
 
 [Google Cloud Console](https://console.cloud.google.com/welcome?hl=ja&project=coffices-431303)
 
-## Payment Information
+### Payment Information
 
 Follow the instructions to set up your billing information.
 
