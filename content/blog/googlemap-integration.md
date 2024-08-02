@@ -16,7 +16,7 @@ Surprisingly, it’s not. In fact, I had been putting it off while when crafting
 
 ## Set up GoogleMaps Platform account
 
-## Make an account
+### Make an account
 
 [Google Cloud Console](https://console.cloud.google.com/welcome?hl=ja&project=coffices-431303)
 
@@ -24,11 +24,11 @@ Surprisingly, it’s not. In fact, I had been putting it off while when crafting
 
 Follow the instructions to set up your billing information.
 
-## Get API_KEY
+### Get API_KEY
 
 Just follow the instructions on the page.
 
-## Filter referer
+### Filter referer
 
 Set your page’s hostname and [local](http://localhost/) hostname
 
