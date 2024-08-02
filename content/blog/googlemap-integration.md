@@ -83,6 +83,14 @@ export default GoogleMap;
 <GoogleMap locationName={cafe.title} />
 ```
 
+## How much does it cost per month?
+
+If you use Google Maps API around 100 times per month, it will likely not cost you anything due to Google's $200 monthly credit for API usage. Here's the breakdown:
+
+Dynamic Maps: $7 per 1,000 requests.
+Static Maps: $2 per 1,000 requests.
+With 100 requests per month, the cost would be minimal compared to the $200 monthly credit. Thus, you can effectively use the API for free unless you exceed this credit limit​.
+
 ## Conclusion
 
 Integrating Google Maps into your Next.js 14 project is easier than you might think. By setting up your Google Maps Platform account, installing the necessary packages, and creating a simple component, you can quickly add map functionality to your site. I hope this guide helps you get started with your own integration. Happy coding!
